@@ -4,7 +4,7 @@ import MessageFilled from '@ant-design/icons/MessageFilled';
 import { FC, useEffect, useState } from 'react';
 import dynamic from 'next/dynamic';
 import classnames from 'classnames';
-import ActionButtons from './ActionButtons';
+// import ActionButtons from './ActionButtons';
 import { LOCAL_STORAGE_KEYS, getLocalStorage, setLocalStorage } from '../../../utils/localStorage';
 import { canPushNotificationsBeSupported } from '../../../utils/browserPushNotifications';
 
@@ -267,7 +267,7 @@ export const Content: FC = () => {
           )}
         </Row>
         <Row>
-          <ActionButtons
+          {/* <ActionButtons
             supportFediverseFeatures={supportFediverseFeatures}
             supportsBrowserNotifications={supportsBrowserNotifications}
             showNotifyReminder={showNotifyReminder}
@@ -277,7 +277,7 @@ export const Content: FC = () => {
             setExternalActionToDisplay={setExternalActionToDisplay}
             setShowFollowModal={setShowFollowModal}
             externalActionSelected={externalActionSelected}
-          />
+          /> */}
         </Row>
 
         <Modal

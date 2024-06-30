@@ -153,12 +153,12 @@ export const UserDropdown: FC<UserDropdownProps> = ({
       label: 'Change name',
       onClick: handleChangeName,
     },
-    {
-      key: 1,
-      icon: <LockOutlined />,
-      label: 'Authenticate',
-      onClick: () => setShowAuthModal(true),
-    },
+    // {
+    //   key: 1,
+    //   icon: <LockOutlined />,
+    //   label: 'Authenticate',
+    //   onClick: () => setShowAuthModal(true),
+    // },
   ];
   if (canShowHideChat)
     items.push({

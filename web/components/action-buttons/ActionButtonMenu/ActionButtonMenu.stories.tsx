@@ -55,21 +55,21 @@ export const ShowFollowExample = {
   },
 };
 
-export const ShowNotifyExample = {
-  render: Template,
+// export const ShowNotifyExample = {
+//   render: Template,
 
-  args: {
-    actions,
-    showNotifyItem: true,
-  },
-};
+//   args: {
+//     actions,
+//     showNotifyItem: true,
+//   },
+// };
 
-export const ShowNotifyAndFollowExample = {
-  render: Template,
+// export const ShowNotifyAndFollowExample = {
+//   render: Template,
 
-  args: {
-    actions,
-    showNotifyItem: true,
-    showFollowItem: true,
-  },
-};
+//   args: {
+//     actions,
+//     showNotifyItem: true,
+//     showFollowItem: true,
+//   },
+// };
