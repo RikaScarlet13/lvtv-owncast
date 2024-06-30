@@ -4,7 +4,7 @@ import { FC, useContext } from 'react';
 import dynamic from 'next/dynamic';
 import { LogTable } from './LogTable';
 import { OwncastLogo } from '../common/OwncastLogo/OwncastLogo';
-import { NewsFeed } from './NewsFeed';
+// import { NewsFeed } from './NewsFeed';
 import { ConfigDetails } from '../../types/config-section';
 import { ServerStatusContext } from '../../utils/server-status-context';
 
@@ -116,32 +116,32 @@ export const Offline: FC<OfflineProps> = ({ logs = [], config }) => {
     });
   }
 
-  if (!config?.yp?.enabled) {
-    data.push({
-      icon: <ProfileTwoTone twoToneColor="#D18BFE" />,
-      title: 'Find an audience on the Owncast Directory',
-      content: (
-        <div>
-          List yourself in the Owncast Directory and show off your stream. Enable it in{' '}
-          <Link href="/admin/config/general/">settings.</Link>
-        </div>
-      ),
-    });
-  }
+  // if (!config?.yp?.enabled) {
+  //   data.push({
+  //     icon: <ProfileTwoTone twoToneColor="#D18BFE" />,
+  //     title: 'Find an audience on the Owncast Directory',
+  //     content: (
+  //       <div>
+  //         List yourself in the Owncast Directory and show off your stream. Enable it in{' '}
+  //         <Link href="/admin/config/general/">settings.</Link>
+  //       </div>
+  //     ),
+  //   });
+  // }
 
-  if (!config?.federation?.enabled) {
-    data.push({
-      icon: <img alt="fediverse" width="20px" src="/img/fediverse-color.png" />,
-      title: 'Add your Owncast instance to the Fediverse',
-      content: (
-        <div>
-          <Link href="/admin/config-federation/">Enable Owncast social</Link> features to have your
-          instance join the Fediverse, allowing people to follow, share and engage with your live
-          stream.
-        </div>
-      ),
-    });
-  }
+  // if (!config?.federation?.enabled) {
+  //   data.push({
+  //     icon: <img alt="fediverse" width="20px" src="/img/fediverse-color.png" />,
+  //     title: 'Add your Owncast instance to the Fediverse',
+  //     content: (
+  //       <div>
+  //         <Link href="/admin/config-federation/">Enable Owncast social</Link> features to have your
+  //         instance join the Fediverse, allowing people to follow, share and engage with your live
+  //         stream.
+  //       </div>
+  //     ),
+  //   });
+  // }
 
   return (
     <>
@@ -167,7 +167,7 @@ export const Offline: FC<OfflineProps> = ({ logs = [], config }) => {
           ))}
         </Col>
         <Col span={12} xs={24} sm={24} md={24} lg={12}>
-          <NewsFeed />
+          {/* <NewsFeed /> */}
         </Col>
       </Row>
       <LogTable logs={logs} initialPageSize={5} />

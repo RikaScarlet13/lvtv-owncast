@@ -14,7 +14,7 @@ export const Footer: FC = () => {
       </span>
       <span className={styles.links}>
         <a href="https://owncast.online/docs" target="_blank" rel="noreferrer">
-          Documentation
+          DOCUMENTATION
         </a>
         <a href="https://owncast.online/help" target="_blank" rel="noreferrer">
           Contribute

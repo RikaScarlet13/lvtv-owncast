@@ -10,7 +10,7 @@ import dynamic from 'next/dynamic';
 import { upgradeVersionAvailable } from '../../utils/apis';
 import { parseSecondsToDurationString } from '../../utils/format';
 
-import { OwncastLogo } from '../common/OwncastLogo/OwncastLogo';
+// import { OwncastLogo } from '../common/OwncastLogo/OwncastLogo';
 import { ServerStatusContext } from '../../utils/server-status-context';
 import { AlertMessageContext } from '../../utils/alert-message-context';
 
@@ -19,6 +19,8 @@ import { TEXTFIELD_PROPS_STREAM_TITLE } from '../../utils/config-constants';
 import { ComposeFederatedPost } from './ComposeFederatedPost';
 import { UpdateArgs } from '../../types/config-section';
 import { FatalErrorStateModal } from '../modals/FatalErrorStateModal/FatalErrorStateModal';
+
+import Logo from '../../assets/images/Logo.png'; // Adjust the path based on your project structure
 
 // Lazy loaded components
 
@@ -210,14 +212,14 @@ export const MainLayout: FC<MainLayoutProps> = ({ children }) => {
       label: <Link href="/admin/config-chat">Chat</Link>,
       key: '/admin/config-chat',
     },
-    {
-      label: <Link href="/admin/config-federation">Social</Link>,
-      key: '/admin/config-federation',
-    },
-    {
-      label: <Link href="/admin/config-notify">Notifications</Link>,
-      key: '/admin/config-notify',
-    },
+    // {
+    //   label: <Link href="/admin/config-federation">Social</Link>,
+    //   key: '/admin/config-federation',
+    // },
+    // {
+    //   label: <Link href="/admin/config-notify">Notifications</Link>,
+    //   key: '/admin/config-notify',
+    // },
   ];
 
   const menuItems = [
@@ -294,7 +296,7 @@ export const MainLayout: FC<MainLayoutProps> = ({ children }) => {
   return (
     <Layout id="admin-page" className={appClass}>
       <Head>
-        <title>Owncast Admin</title>
+        <title>Streamer</title>
         <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon/favicon-32x32.png" />
       </Head>
 
@@ -304,10 +306,18 @@ export const MainLayout: FC<MainLayoutProps> = ({ children }) => {
 
       <Sider width={240} className="side-nav">
         <h1 className="owncast-title">
-          <span className="logo-container">
-            <OwncastLogo variant="simple" />
-          </span>
-          <span className="title-label">Owncast Admin</span>
+          <div className="logo-container">
+            <img
+              src={Logo.src}
+              alt="Your Personal Logo"
+              style={{
+                width: '60px',
+                height: 'auto',
+                borderRadius: '50%',
+              }}
+            />
+          </div>
+          <span className="title-label">LVTV Stream</span>
         </h1>
         <Menu
           mode="inline"
@@ -352,9 +362,12 @@ export const MainLayout: FC<MainLayoutProps> = ({ children }) => {
         <Content className="main-content-container">{children}</Content>
 
         <Footer className="footer-container">
-          <a href="https://owncast.online/?source=admin" target="_blank" rel="noopener noreferrer">
+          {/* <a href="https://owncast.online/?source=admin" target="_blank" rel="noopener noreferrer">
             About Owncast v{versionNumber}
-          </a>
+          </a> */}
+          <span>
+            Powered by <a href="https://owncast.online">Owncast v{versionNumber}</a>
+          </span>
         </Footer>
       </Layout>
 
